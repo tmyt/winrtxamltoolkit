@@ -547,7 +547,7 @@
                                             x:Name="Content"
                                             Content="{TemplateBinding Content}"
                                             ContentTemplate="{TemplateBinding ContentTemplate}"
-                                            HorizontalAlignment="Left"
+                                            HorizontalAlignment="Stretch"
                                             Margin="{TemplateBinding Padding}" />
                                         <!--Cursor="{TemplateBinding Cursor}"-->
                                     </Grid>
