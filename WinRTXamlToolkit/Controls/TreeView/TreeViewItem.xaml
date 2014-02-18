@@ -471,6 +471,7 @@
                         <Rectangle
                             x:Name="Selection"
                             Grid.Column="1"
+                            Grid.ColumnSpan="2"
                             Opacity="0"
                             StrokeThickness="1"
                             IsHitTestVisible="False"
@@ -562,6 +563,7 @@
                         <Border
                             x:Name="Validation"
                             Grid.Column="1"
+                            Grid.ColumnSpan="2"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             BorderBrush="#FFDB000C"
                             CornerRadius="2"
