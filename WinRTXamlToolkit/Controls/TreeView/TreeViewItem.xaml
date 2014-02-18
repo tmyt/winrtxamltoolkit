@@ -490,6 +490,7 @@
                         <Button
                             x:Name="Header"
                             Grid.Column="1"
+                            Grid.ColumnSpan="2"
                             ClickMode="Hover"
                             Background="{TemplateBinding Background}"
                             Foreground="{TemplateBinding Foreground}"

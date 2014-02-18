@@ -117,8 +117,8 @@
                                 Margin="1">
                                 <ScrollViewer
                                     x:Name="ScrollViewer"
-                                    HorizontalScrollBarVisibility="Auto"
-                                    VerticalScrollBarVisibility="Auto"
+                                    HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                    VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
                                     Background="{x:Null}"
                                     BorderBrush="Transparent"
                                     BorderThickness="0"
