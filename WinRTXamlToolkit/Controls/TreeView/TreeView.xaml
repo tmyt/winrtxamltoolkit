@@ -107,14 +107,16 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
 
+                        <!--
                         <Border
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="2">
+                        -->
                             <Border
                                 Padding="{TemplateBinding Padding}"
                                 Background="{TemplateBinding Background}"
-                                Margin="1">
+                                >
                                 <ScrollViewer
                                     x:Name="ScrollViewer"
                                     HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
@@ -128,7 +130,9 @@
                                         Margin="5" />
                                 </ScrollViewer>
                             </Border>
+                        <!--
                         </Border>
+                        -->
 
                         <Border
                             x:Name="Validation"
