@@ -38,7 +38,7 @@ namespace WinRTXamlToolkit.Controls.Extensions
         /// <summary>
         /// Validates the field value.
         /// </summary>
-        internal void Validate()
+        public virtual void Validate()
         {
             var format = FieldValidationExtensions.GetFormat(Field);
 
@@ -322,7 +322,7 @@ namespace WinRTXamlToolkit.Controls.Extensions
         protected virtual void MarkValid()
         {
             var brush = FieldValidationExtensions.GetValidBrush(Field);
-            Field.Background = brush;
+            Field.BorderBrush = brush;
             FieldValidationExtensions.SetIsValid(Field, true);
             FieldValidationExtensions.SetValidationMessage(Field, null);
             FieldValidationExtensions.SetValidationMessageVisibility(Field, Visibility.Collapsed);
@@ -335,7 +335,7 @@ namespace WinRTXamlToolkit.Controls.Extensions
         protected virtual void MarkInvalid(string errorMessage)
         {
             var brush = FieldValidationExtensions.GetInvalidBrush(Field);
-            Field.Background = brush;
+            Field.BorderBrush = brush;
             FieldValidationExtensions.SetIsValid(Field, false);
             FieldValidationExtensions.SetValidationMessage(Field, errorMessage);
             FieldValidationExtensions.SetValidationMessageVisibility(Field, Visibility.Visible);
