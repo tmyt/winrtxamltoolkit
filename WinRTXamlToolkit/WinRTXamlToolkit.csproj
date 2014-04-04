@@ -174,6 +174,7 @@
     <Compile Include="Controls\Extensions\ButtonBaseExtensions.cs" />
     <Compile Include="Controls\Extensions\Forms\FieldValidationHandler.cs" />
     <Compile Include="Controls\Extensions\Forms\PasswordBoxFormatValidationHandler.cs" />
+    <Compile Include="Controls\Extensions\Forms\RichEditBoxFormatValidationhandler.cs" />
     <Compile Include="Controls\Extensions\Forms\ValidationChecks.cs" />
     <Compile Include="Controls\Extensions\ListBoxItemExtensions.cs" />
     <Compile Include="Controls\Extensions\MessageDialogExtensions.cs" />

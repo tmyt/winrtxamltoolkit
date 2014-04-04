@@ -3,6 +3,7 @@ using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using WinRTXamlToolkit.Controls.Extensions.Forms;
 
 namespace WinRTXamlToolkit.Controls.Extensions
 {
@@ -526,6 +527,7 @@ namespace WinRTXamlToolkit.Controls.Extensions
         {
             TextBox textBox = d as TextBox;
             PasswordBox passwordBox = d as PasswordBox;
+            RichEditBox richEditBox = d as RichEditBox;
 
             if (textBox != null)
             {
@@ -550,6 +552,17 @@ namespace WinRTXamlToolkit.Controls.Extensions
                 }
 
                 newFormatValidationHandler.Attach(passwordBox);
+            }else if (richEditBox != null)
+            {
+                RichEditBoxFormatValidationHandler oldFormatValidationHandler = (RichEditBoxFormatValidationHandler)e.OldValue;
+                RichEditBoxFormatValidationHandler newFormatValidationHandler = (RichEditBoxFormatValidationHandler)richEditBox.GetValue(FormatValidationHandlerProperty);
+
+                if (oldFormatValidationHandler != null)
+                {
+                    oldFormatValidationHandler.Detach();
+                }
+
+                newFormatValidationHandler.Attach(richEditBox);
             }
         }
         #endregion
