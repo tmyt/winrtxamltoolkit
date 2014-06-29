@@ -1,7 +1,4 @@
-﻿#if !WIN81
-using Windows.UI.ViewManagement;
-#endif
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 
 namespace WinRTXamlToolkit.Common
 {
@@ -22,11 +19,7 @@ namespace WinRTXamlToolkit.Common
         {
             get
             {
-#if WIN81
                 return Window.Current.Bounds.Width <= SnappedViewWidth;
-#else
-                return ApplicationView.Value == ApplicationViewState.Snapped;
-#endif
             }
         }
 
