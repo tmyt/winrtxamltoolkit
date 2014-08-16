@@ -221,6 +221,7 @@ namespace WinRTXamlToolkit.Controls.Extensions
             var popups = VisualTreeHelper.GetOpenPopups(Window.Current)
                 .Where(p => p.Child != null).Select(p=>p.Child);
             var ancestors = dob.GetAncestors().ToArray();
+            if (ancestors.Length == 0) ancestors = new[] {dob};
             return popups.Any(ancestors.Contains) ||
                 (Window.Current.Content != null && ancestors.Contains(Window.Current.Content));
         }
